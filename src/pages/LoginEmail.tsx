@@ -1,33 +1,17 @@
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
-import { RectButton } from 'react-native-gesture-handler';
-import {useNavigation} from '@react-navigation/native';
+import { RectButton, TextInput } from 'react-native-gesture-handler';
 
 
 
 
 
-export default function LoginPage(){
-
-  const navigation = useNavigation();
-  function hundleNavigationLoginPage(){
-    navigation.navigate('LoginEmail');
-  }
-
+export default function LoginEmail(){
     return(
       <View style={styles.container}>
-        <Text style={styles.SignText}>
-          Sing With Gmail
-        </Text>
-
-        <RectButton style={styles.ButtonLogin} onPress={hundleNavigationLoginPage}>
-           <Text style={styles.TextLogin}>Email</Text>
-        </RectButton>
-
-        <Text style={styles.SignTextOr}>
-          or
-        </Text>
+        <Text style={styles.SignText}>Sing With Gmail</Text>
         <View style={styles.buttonContainer}>
+          
           <RectButton style={styles.ButtonLoginFacebook} onPress={()=>{}}>
             <Text style={styles.TextLogin}>FaceBook</Text>
           </RectButton>
@@ -35,6 +19,14 @@ export default function LoginPage(){
             <Text style={styles.TextLogin}>Twitter</Text>
           </RectButton>
         </View>
+
+        <Text style={styles.SignTextOr}>or</Text>
+        <TextInput style={styles.input}>@gmail.com</TextInput>
+        <TextInput style={styles.input}/>
+
+        <RectButton style={styles.ButtonLogin} onPress={()=>{}}>
+           <Text style={styles.TextLogin}>Sign Up</Text>
+        </RectButton>
       
       </View>
       
@@ -52,12 +44,28 @@ const styles = StyleSheet.create({
       alignItems: 'center',
       justifyContent: 'center',
     },
-
       SignText :{
-        paddingRight: 110,
+        justifyContent:'center',
+        padding:30,
+        paddingRight:140,
+        alignItems:"center",
         color:"#fff",
-        fontSize: 26
+        fontSize: 26,
+        
     },
+    input :{
+      flex:1,
+      color:"#FFF",
+      backgroundColor:"#555555",
+      justifyContent:'center',
+      alignItems:'center',
+      width:300,
+      height:50,
+      borderRadius:26,
+      margin:10,
+      textAlign:'center'
+      
+  },
       ButtonLogin:{
         height:55,
         width: 320,
@@ -65,12 +73,12 @@ const styles = StyleSheet.create({
         backgroundColor:"#FF2244",
         alignItems:"center",
         justifyContent:"center",
-        paddingTop:30
+        marginTop:34,
 
 
       }, SignTextOr :{
-        paddingTop:30,
-        paddingRight:270,
+        marginBottom:20,
+        marginRight:270,
         color:"#fff",
         fontSize: 26
     },
@@ -78,9 +86,9 @@ const styles = StyleSheet.create({
     TextLogin:{
 
       fontSize:20,
-      paddingBottom:34,
       alignItems:"center",
-      color:"#FFF"
+      color:"#FFF",
+      justifyContent:"space-between"
     },
 
     ButtonLoginFacebook:{
@@ -112,10 +120,10 @@ const styles = StyleSheet.create({
     },
 
     buttonContainer:{
-      marginTop:30,
+      
       flexDirection:'row',
-      justifyContent:'space-between',
-
+     
+      
 
     }
      
