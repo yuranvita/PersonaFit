@@ -1,12 +1,30 @@
-import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
-import { RectButton, TextInput } from 'react-native-gesture-handler';
-
+import  React , { useState} from 'react';
+import { StyleSheet, Text, View ,Alert} from 'react-native';
+import { RectButton, TextInput  } from 'react-native-gesture-handler';
+import {useNavigation} from '@react-navigation/native';
 
 
 
 
 export default function LoginEmail(){
+
+  const navigation = useNavigation();
+
+  const [email , setEmail] = useState('@gmail.com');
+  const [senha , setSenha] = useState('');
+
+  function valida(email){
+    Alert.alert(`Bem-Vindo ${email} `);
+  }
+
+  async function hundleNavigateHomePage(){
+
+    await valida(email);
+
+    
+    navigation.navigate('HomePage');
+  }
+
     return(
       <View style={styles.container}>
         <Text style={styles.SignText}>Sing With Gmail</Text>
@@ -21,10 +39,18 @@ export default function LoginEmail(){
         </View>
 
         <Text style={styles.SignTextOr}>or</Text>
-        <TextInput style={styles.input}>@gmail.com</TextInput>
-        <TextInput style={styles.input}/>
+        <TextInput 
+        style={styles.input}
+        value={email}
+        onChangeText={setEmail}
+        />
+        <TextInput 
+        style={styles.input}
+        value={senha}
+        onChangeText={setSenha}
+        />
 
-        <RectButton style={styles.ButtonLogin} onPress={()=>{}}>
+        <RectButton style={styles.ButtonLogin} onPress={hundleNavigateHomePage}>
            <Text style={styles.TextLogin}>Sign Up</Text>
         </RectButton>
       
@@ -60,7 +86,7 @@ const styles = StyleSheet.create({
       justifyContent:'center',
       alignItems:'center',
       width:300,
-      height:50,
+      maxHeight:50,
       borderRadius:26,
       margin:10,
       textAlign:'center'
