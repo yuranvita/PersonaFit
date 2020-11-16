@@ -39,115 +39,9 @@ export default function HomePage(){
                     </View>
                     <View style={styles.box_container}>
                         <AirbnbRating
-                        
                         count={5}
-                        reviewSize={15}
                         reviews={["Terrible", "Bad", "Hmm...","VeryGood", "Jesus"]}
-                        
-                        isDisabled={false}
-                        size={10}
-                        />
-                        <RectButton style={styles.buyButton}>
-                            <Text style={styles.box_text}>Buy</Text>
-                        </RectButton>
-                    </View>
-                </View>
-                <View style={styles.box}>
-                    <View style={styles.box_container}>
-                        <Image 
-                        style={styles.image}
-                        source={imagem}/>
-                        <Text style={styles.box_text}>R$ 200</Text>
-                    </View>
-                    <View style={styles.box_container}>
-                        <Text style={styles.box_text_d}>{nome}</Text>
-                        <Text style={styles.box_text_d}>{discription}</Text>
-                    </View>
-                    <View style={styles.box_container}>
-                        <AirbnbRating
-                        
-                        count={5}
-                        reviewSize={15}
-                        reviews={["Terrible", "Bad", "Hmm...","VeryGood", "Jesus"]}
-                        
-                        isDisabled={false}
-                        size={10}
-                        />
-                        <RectButton style={styles.buyButton}>
-                            <Text style={styles.box_text}>Buy</Text>
-                        </RectButton>
-                    </View>
-                </View>
-                <View style={styles.box}>
-                    <View style={styles.box_container}>
-                        <Image 
-                        style={styles.image}
-                        source={imagem}/>
-                        <Text style={styles.box_text}>R$ 200</Text>
-                    </View>
-                    <View style={styles.box_container}>
-                        <Text style={styles.box_text_d}>{nome}</Text>
-                        <Text style={styles.box_text_d}>{discription}</Text>
-                    </View>
-                    <View style={styles.box_container}>
-                        <AirbnbRating
-                        
-                        count={5}
-                        reviewSize={15}
-                        reviews={["Terrible", "Bad", "Hmm...","VeryGood", "Jesus"]}
-                        
-                        isDisabled={false}
-                        size={10}
-                        />
-                        <RectButton style={styles.buyButton}>
-                            <Text style={styles.box_text}>Buy</Text>
-                        </RectButton>
-                    </View>
-                </View>
-                <View style={styles.box}>
-                    <View style={styles.box_container}>
-                        <Image 
-                        style={styles.image}
-                        source={imagem}/>
-                        <Text style={styles.box_text}>R$ 200</Text>
-                    </View>
-                    <View style={styles.box_container}>
-                        <Text style={styles.box_text_d}>{nome}</Text>
-                        <Text style={styles.box_text_d}>{discription}</Text>
-                    </View>
-                    <View style={styles.box_container}>
-                        <AirbnbRating
-                        
-                        count={5}
-                        reviewSize={15}
-                        reviews={["Terrible", "Bad", "Hmm...","VeryGood", "Jesus"]}
-                        
-                        isDisabled={false}
-                        size={10}
-                        />
-                        <RectButton style={styles.buyButton}>
-                            <Text style={styles.box_text}>Buy</Text>
-                        </RectButton>
-                    </View>
-                </View>
-                <View style={styles.box}>
-                    <View style={styles.box_container}>
-                        <Image 
-                        style={styles.image}
-                        source={imagem}/>
-                        <Text style={styles.box_text}>R$ 200</Text>
-                    </View>
-                    <View style={styles.box_container}>
-                        <Text style={styles.box_text_d}>{nome}</Text>
-                        <Text style={styles.box_text_d}>{discription}</Text>
-                    </View>
-                    <View style={styles.box_container}>
-                        <AirbnbRating
-                        
-                        count={5}
-                        reviewSize={15}
-                        reviews={["Terrible", "Bad", "Hmm...","VeryGood", "Jesus"]}
-                        
+                        starStyle={styles.rating}
                         isDisabled={false}
                         size={10}
                         />
@@ -219,6 +113,9 @@ const styles = StyleSheet.create({
     },
     box_container:{
         maxWidth:140,
+        flexDirection:'column',
+        justifyContent:'center',
+        alignItems:'center'
     },
     box_text_d:{
         color:'#FFF',
@@ -227,7 +124,7 @@ const styles = StyleSheet.create({
         
     },
     rating:{
-   
+        marginBottom:10
     }
 
 
