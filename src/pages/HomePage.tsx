@@ -1,5 +1,5 @@
 import React  from 'react';
-import ReactDOM from 'react-dom';
+
 
 
 import {Rating , AirbnbRating } from 'react-native-ratings'
@@ -60,14 +60,15 @@ export default function HomePage(){
 const styles = StyleSheet.create({
     container: {
         flex:1,
-        marginTop:25,
+        marginTop:28,
         alignItems:'center',
         justifyContent:'center',
         backgroundColor:'#555555'
     },
     home:{
         alignContent:'center',
-        fontSize:28
+        fontSize:28,
+        color:'#FFFFFF'
     },
     content:{   
         backgroundColor:'#333333',
@@ -79,7 +80,7 @@ const styles = StyleSheet.create({
         marginLeft:30,
         marginTop:50,
         height:160,
-        width:300,
+        maxWidth:340,
         justifyContent:'space-between',
         alignItems:'center',
         backgroundColor:'#555555',
@@ -94,7 +95,9 @@ const styles = StyleSheet.create({
         backgroundColor:'#FF2244',
         height:40,
         width:80,
-        marginRight:15
+        marginRight:15,
+        marginBottom:10,
+
         
     },
     image:{

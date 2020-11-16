@@ -1,10 +1,9 @@
 import React from 'react';
-import { View , StyleSheet , Text} from 'react-native';
+import { View , StyleSheet } from 'react-native';
 
 
 
 import { BorderlessButton } from 'react-native-gesture-handler';
-import { MaterialCommunityIcons } from '@expo/vector-icons'; 
 import { Zocial } from '@expo/vector-icons'; 
 import { Entypo } from '@expo/vector-icons'; 
 import { FontAwesome } from '@expo/vector-icons'; 
@@ -23,7 +22,7 @@ export default function Header(){
         navigation.navigate('HomePage');
     }
     function hundleGoProgams(){
-        navigation.navigate('LoginEmail');
+        navigation.navigate('ProgramsPage');
     }
     function hundleGoTrainers(){
         navigation.navigate('LoginEmail');
@@ -34,10 +33,10 @@ export default function Header(){
 
     return (
         <View style={styles.container}>
-            <BorderlessButton onPress={hundleGoProgams}>
-                <MaterialCommunityIcons name="home-outline" size={50} color="black" />
+            <BorderlessButton onPress={hundleGoHome}>
+                <Entypo name="home" size={40} color="black" />  
             </BorderlessButton>
-            <BorderlessButton>
+            <BorderlessButton onPress={hundleGoProgams}>
                 <Entypo name="box" size={40} color="black" />
             </BorderlessButton>
             <BorderlessButton>
@@ -59,8 +58,8 @@ export default function Header(){
 const styles = StyleSheet.create({
     container : {
         marginTop:680,
-        width:340,
-        marginLeft:10,
+        width:350,
+        marginLeft:20,
         paddingRight:10,
         borderRadius:19,
         backgroundColor : '#f1f1f1',
@@ -68,7 +67,7 @@ const styles = StyleSheet.create({
         flexDirection : 'row',
         justifyContent : 'space-between',
         alignItems : 'center',
-        flex : .2,
+        flex : 1,
         position :'absolute'
     },
 
