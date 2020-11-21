@@ -28,7 +28,7 @@ export default function Header(){
         navigation.navigate('TrainerPage');
     }
     function hundleGoProfile(){
-        navigation.navigate('LoginEmail');
+        navigation.navigate('ProfilePage');
     }
 
     return (
@@ -42,7 +42,7 @@ export default function Header(){
             <BorderlessButton onPress={hundleGoTrainers}>
                 <FontAwesome name="group" size={35} color="black" />
             </BorderlessButton>
-            <BorderlessButton>
+            <BorderlessButton onPress={hundleGoProfile}>
                 <Zocial name="persona" size={40} color="black" />
             </BorderlessButton>
                 
@@ -57,13 +57,15 @@ export default function Header(){
 
 const styles = StyleSheet.create({
     container : {
-        marginTop:710,
+        marginTop:700,
         width:350,
+        maxWidth:350,
         marginLeft:20,
         paddingRight:10,
         borderRadius:19,
         backgroundColor : '#f1f1f1',
-        height:60,
+        height:100,
+        maxHeight:60,
         flexDirection : 'row',
         justifyContent : 'space-between',
         alignItems : 'center',

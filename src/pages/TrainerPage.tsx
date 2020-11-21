@@ -76,6 +76,9 @@ export default function HomePage(){
                         <AntDesign name="playcircleo" size={24} color="black" style={styles.button} />
                     </RectButton>
                </View>
+               <View style={styles.boxPrograms}>
+                    <Text>@bruno_Guimarães</Text>
+               </View>
             </ScrollView>
         </View>
         
@@ -174,6 +177,12 @@ const styles = StyleSheet.create({
         marginRight:20,
         marginVertical:-60,
         flexDirection:'row'
+    },
+    boxPrograms:{
+        flexDirection:'row',
+        height:100,
+        width:330,
+
     }
 
 })

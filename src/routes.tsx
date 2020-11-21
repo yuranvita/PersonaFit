@@ -12,6 +12,8 @@ import HomePage from './pages/HomePage';
 import Header from './components/Header';
 import ProgramsPage from './pages/ProgramsPage';
 import TrainerPage from './pages/TrainerPage';
+import ProfilePage from './pages/ProfilePage';
+import MenssengerPage from './pages/MenssegerPage';
 
 
 export default function Routes(){
@@ -23,6 +25,8 @@ export default function Routes(){
                 <Screen name="HomePage" component={HomePage} options={{ headerShown:true, header :()=> <Header/>}}/>
                 <Screen name="ProgramsPage" component={ProgramsPage} options={{ headerShown:true, header :()=> <Header/>}}/>
                 <Screen name="TrainerPage" component={TrainerPage} options={{ headerShown:true, header :()=> <Header/>}}/>
+                <Screen name="ProfilePage" component={ProfilePage} options={{ headerShown:true, header :()=> <Header/>}}/>
+                <Screen name="MenssengerPage" component={MenssengerPage}/>
             </Navigator>
         </NavigationContainer>
     );
