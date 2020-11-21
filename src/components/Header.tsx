@@ -25,7 +25,7 @@ export default function Header(){
         navigation.navigate('ProgramsPage');
     }
     function hundleGoTrainers(){
-        navigation.navigate('LoginEmail');
+        navigation.navigate('TrainerPage');
     }
     function hundleGoProfile(){
         navigation.navigate('LoginEmail');
@@ -39,7 +39,7 @@ export default function Header(){
             <BorderlessButton onPress={hundleGoProgams}>
                 <Entypo name="box" size={40} color="black" />
             </BorderlessButton>
-            <BorderlessButton>
+            <BorderlessButton onPress={hundleGoTrainers}>
                 <FontAwesome name="group" size={35} color="black" />
             </BorderlessButton>
             <BorderlessButton>
@@ -57,7 +57,7 @@ export default function Header(){
 
 const styles = StyleSheet.create({
     container : {
-        marginTop:680,
+        marginTop:710,
         width:350,
         marginLeft:20,
         paddingRight:10,

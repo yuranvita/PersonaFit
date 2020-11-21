@@ -15,7 +15,7 @@ import imagem from '../images/image8.png';
 
 export default function HomePage(){
 
-    const value = 2;
+   
 
     const nome = '@bodyBuilder';
     const discription = "Body , Builder";
@@ -40,7 +40,7 @@ export default function HomePage(){
                     <View style={styles.box_container}>
                         <AirbnbRating
                         count={5}
-                        reviews={["Terrible", "Bad", "Hmm...","VeryGood", "Jesus"]}
+                        reviews={["1", "2", "3", "4", "5"]}
                         starStyle={styles.rating}
                         isDisabled={false}
                         size={10}
@@ -60,7 +60,7 @@ export default function HomePage(){
 const styles = StyleSheet.create({
     container: {
         flex:1,
-        marginTop:28,
+        marginTop:35,
         alignItems:'center',
         justifyContent:'center',
         backgroundColor:'#555555'
